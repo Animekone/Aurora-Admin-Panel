@@ -7,7 +7,7 @@ services:
     environment:
       TZ: 'Asia/Shanghai'
       ENABLE_SENTRY: 'yes'
-      DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
+      DATABASE_URL: 'postgresql://animekone:woshiluoqiang520@postgres:5432/auroraaa'
       TRAFFIC_INTERVAL_SECONDS: 600
       DDNS_INTERVAL_SECONDS: 120
     volumes:
