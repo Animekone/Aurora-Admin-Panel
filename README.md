@@ -179,12 +179,6 @@ wget https://raw.githubusercontent.com/Aurora-Admin-Panel/deploy/main/docker-com
 docker-compose pull && docker-compose down --remove-orphans && docker-compose up -d
 ```
 
-### ~~内测版（目前已不维护，请不要使用）~~
-```shell
-cd ~/aurora
-wget https://raw.githubusercontent.com/Aurora-Admin-Panel/deploy/main/docker-compose-dev.yml -O docker-compose.yml
-docker-compose pull && docker-compose down --remove-orphans && docker-compose up -d
-```
 
 ## 数据库备份与恢复
 
