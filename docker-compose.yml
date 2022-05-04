@@ -6,7 +6,6 @@ services:
     command: bash worker.sh
     environment:
       TZ: 'Asia/Shanghai'
-      ENABLE_SENTRY: 'yes'
       DATABASE_URL: 'postgresql://animekone:woshiluoqiang520@postgres:5432/auroraaa'
       TRAFFIC_INTERVAL_SECONDS: 600
       DDNS_INTERVAL_SECONDS: 120
@@ -26,8 +25,7 @@ services:
     environment:
       TZ: 'Asia/Shanghai'
       PYTHONPATH: .
-      DATABASE_URL: 'postgresql://aurora:AuroraAdminPanel321@postgres:5432/aurora'
-      ENABLE_SENTRY: 'yes'
+      DATABASE_URL: 'postgresql://animekone:woshiluoqiang520@postgres:5432/auroraa'
       SECREY_KEY: 'AuroraAdminPanel321'
     volumes:
       - app-data:/app/ansible/priv_data_dirs
@@ -43,7 +41,7 @@ services:
     environment:
       TZ: 'Asia/Shanghai'
     ports:
-      - 8000:80
+      - 10000:80
     depends_on:
       - backend
     networks:
@@ -57,13 +55,13 @@ services:
     networks:
       - aurora
 
-  postgres:
+  Postgres:
     image: postgres:13-alpine
     restart: always
     environment:
       TZ: 'Asia/Shanghai'
-      POSTGRES_USER: aurora
-      POSTGRES_PASSWORD: AuroraAdminPanel321
+      POSTGRES_USER: animekone
+      POSTGRES_PASSWORD: woshiluoqiang520
       POSTGRES_DB: aurora
     volumes:
       - db-data:/var/lib/postgresql/data
